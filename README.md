@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Business Website Starter
 
-## Getting Started
+"Business Website Starter" — a multi-purpose website template suitable for various types of clients (companies, agencies, schools, organizations, local businesses), built using Next.js (App Router), TypeScript, and Tailwind CSS; it includes a built-in backend and is designed for easy resale as a template or starter kit.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 🛠 Tech Stack
+
+Frontend
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS v4
+
+Animation
+
+- Framer Motion
+
+UI
+
+- Shadcn UI
+- Lucide React
+
+Carousel
+
+- Embla Carousel
+
+Form
+
+- React Hook Form
+- Zod
+
+Data Fetching
+
+- React Query
+- Axios
+
+Utility
+
+- clsx
+- tailwind-merge
+
+---
+
+# 📁 Project Structure
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+creative-agency-landing/
+├── app/
+│ ├── fire/
+│ │ └── contact/
+│ │ └── route.ts # Backend: validate + save lead + send email
+│ │
+│ ├── about/
+│ │ └── page.tsx # /about — story, vision-mission, team
+│ │
+│ ├── services/
+│ │ └── page.tsx # /services — service/program details
+│ │
+│ ├── portfolio/
+│ │ └── page.tsx # /portfolio — work/product showcase
+│ │
+│ ├── contact/
+│ │ └── page.tsx # /contact — full form + info + map
+│ │
+│ ├── favicon.ico
+│ ├── globals.css # Theme variables (reskin here)
+│ ├── layout.tsx # Root layout + ThemeProvider + default metadata
+│ ├── page.tsx # / — Home (summary of all sections)
+│ ├── robots.ts # Auto-generate robots.txt
+│ └── sitemap.ts # Auto-generate sitemap.xml
+│
+├── components/
+│ ├── ui/ # shadcn/Radix primitives
+│ │ ├── accordion.tsx
+│ │ ├── avatar.tsx
+│ │ ├── badge.tsx
+│ │ ├── button.tsx
+│ │ ├── card.tsx
+│ │ ├── form.tsx
+│ │ ├── input.tsx
+│ │ ├── label.tsx
+│ │ ├── sonner.tsx
+│ │ └── textarea.tsx
+│ │
+│ ├── layout/
+│ │ ├── Navbar.tsx # Sticky nav, mobile hamburger, toggle, CTA
+│ │ ├── Footer.tsx # Logo, nav, social, newsletter, copyright
+│ │ ├── Container.tsx # Wrapper width/padding consistent
+│ │ └── SectionWrapper.tsx # Scroll animation (fade/slide/stagger, viewport trigger)
+│ │
+│ ├── sections/
+│ │ ├── Hero.tsx # Headline, dual CTA, hero image + animation
+│ │ ├── Services.tsx # Grid cards (relabel: Programs/What We Do)
+│ │ ├── About.tsx # Summary + counter statistics
+│ │ ├── Testimonials.tsx # Carousel reviews
+│ │ ├── Pricing.tsx # 3 tier + toggle monthly/yearly
+│ │ ├── FAQ.tsx # Accordion FAQ
+│ │ └── Contact.tsx # Wrapper: ContactForm + info + map
+│ │
+│ ├── shared/
+│ │ ├── ServiceCard.tsx
+│ │ ├── TestimonialCard.tsx
+│ │ ├── PricingCard.tsx
+│ │ ├── FAQAccordion.tsx
+│ │ ├── PortfolioCard.tsx
+│ │ └── Counter.tsx # Animated number counter
+│ │
+│ ├── ContactForm.tsx # react-hook-form + zod, loading/success/error
+│ ├── ThemeProvider.tsx # next-themes wrapper
+│ └── ThemeToggle.tsx # Dark/Light switch
+│
+├── lib/
+│ ├── utils.ts # cn() helper
+│ ├── prisma.ts # Prisma client singleton (optional)
+│ ├── validations/
+│ │ └── contact.ts # zod schema contact form
+│ └── constants/
+│ ├── nav-links.ts # Navigation data (reusable Navbar/Footer)
+│ └── site-config.ts # Brand name, description, social links (quick reskin)
+│
+├── prism/ # Optional — if save leads
+│ ├── schema.prisma # Lead Model
+│ └── dev.db # SQLite (gitignored)
+│
+├── public/
+│ ├── images/
+│ │ ├── hero/
+│ │ ├── testimonials/
+│ │ └── portfolio/
+│ └── og-image.png # Default Open Graph image
+│
+├── types/
+│ └── index.ts # Shared TypeScript types (Service, Testimonial, etc.)
+│
+├── .env.example
+├── .env.local # (gitignored)
+├── .gitignore
+├── components.json # shadcn config
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+├── README.md
+├── tailwind.config.ts
+└── tsconfig.json
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# 👨‍💻 Author
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with ❤️ using Next.js,Tailwind CSS & Framer Motion.
